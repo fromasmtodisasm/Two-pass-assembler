@@ -1,0 +1,15 @@
+.extern e1
+.public p1
+.data.dat1
+shr r7, r5, 50
+.long k1, e1, 5
+.align 16, 50, 15
+p1: div r1, 50
+call r5, k1
+.bss.bss3
+in r1, r13
+ldch r14, 50
+k1: str r8, r9, 2, 50
+call r10, p1
+p3: call r8, e1
+.end

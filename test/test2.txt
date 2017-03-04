@@ -1,0 +1,18 @@
+.extern e1, e2, e3
+.public p, p1, p2
+.bss.bss1
+.word 5, p, k1
+.char 49, 100
+.skip 5, 50
+k1: int 12
+p1: div r1, 50
+p2: ldr r10, r6, 4, 50
+.text.text2
+out r4, r6
+p: shl r7, r5, 5
+k2: shr r7, r5, 10
+.data.dat2
+ldcl r14, k1
+ldc r14, k3
+k3: ldc r12, p2
+.end

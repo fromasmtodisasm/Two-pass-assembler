@@ -1,0 +1,41 @@
+SSproj: FileRel.o KodoviQ.o OpCodeTable.o OpUlaz.o rad.o RelocTable.o SymTable.o SymUlaz.o main.o
+	g++ -o SSProj -g FileRel.o KodoviQ.o OpCodeTable.o OpUlaz.o rad.o RelocTable.o SymTable.o SymUlaz.o main.o
+
+FileRel.o: FileRel.cpp FileRel.h KodoviQ.h RelocTable.h SymTable.h
+	g++ -c -g FileRel.cpp
+
+KodoviQ.o: KodoviQ.cpp KodoviQ.h 
+	g++ -c -g KodoviQ.cpp
+
+main.o: main.cpp rad.h
+	g++ -c -g main.cpp
+
+OpCodeTable.o: OpCodeTable.cpp OpCodeTable.h OpUlaz.h
+	g++ -c -g OpCodeTable.cpp
+
+OpUlaz.o: OpUlaz.cpp OpUlaz.h
+	g++ -c -g OpUlaz.cpp
+
+rad.o: rad.cpp rad.h SymTable.h OpCodeTable.h RelocTable.h KodoviQ.h FileRel.h
+	g++ -c -g rad.cpp
+
+RelocTable.o: RelocTable.cpp RelocTable.h
+	g++ -c -g RelocTable.cpp
+
+SymTable.o: SymTable.cpp SymTable.h SymUlaz.h
+	g++ -c -g SymTable.cpp
+
+SymUlaz.o: SymUlaz.cpp SymUlaz.h
+	g++ -c -g SymUlaz.cpp
+
+clean:
+	rm SymUlaz.o
+	rm OpUlaz.o
+	rm KodoviQ.o
+	rm SymTable.o
+	rm OpCodeTable.o
+	rm RelocTable.o
+	rm FileRel.o
+	rm rad.o
+	rm main.o
+	rm SSproj

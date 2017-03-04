@@ -1,0 +1,27 @@
+.public p, p1, p2
+.extern ext, x, ab
+.data.pod
+.skip 5
+.align 8, 35, 15
+int 15
+lab: cmpf_al r5, 5
+call_lt r2, a
+cmpf r5, r6
+and r1, r2
+p: .word 5, lab, p2
+p1: .char 36
+a: .long p-k2, ext
+.text.druga
+.skip 10, 35
+k2: .word 5
+p2: .char 65
+lab4: call_lt r2, k2
+call_lt r2, 54
+call_lt r2, p2
+in_le r13, r10
+shlf_ne r7, r18, 5
+ldr r5, r6, 3, 7
+lab3: ldch_lt r11, 50
+ldc_gt r10, 84
+ldc_gt r10, p1
+.end

@@ -1,0 +1,18 @@
+.extern e2
+.public p, p1
+.text.text1
+.long p-k2+5-e2
+.align 16, 50, 15
+not r7, r1
+k1: mov r5, r7
+.bss.bss1
+ldc r14, k1
+shr r7, r5, 50
+call r10, p1
+.word p, k2
+k2: in r1, r13
+.data.dat1
+p: ldch r14, 50
+p1: str r8, r9, 2, 50
+.char 101, 56
+.end

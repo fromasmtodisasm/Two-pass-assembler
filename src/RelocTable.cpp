@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   RelocTable.cpp
+ * Author: etf
+ * 
+ * Created on May 29, 2016, 11:10 AM
+ */
+
+#include "RelocTable.h"
+
+RelocTableQ::RelocTableQ() {
+}
+
+RelocTableQ::RelocTableQ(const RelocTableQ& orig) {
+}
+
+RelocTableQ::~RelocTableQ() {
+}
+
+string RelocTableQ::ispisi() {
+	size_t len = getQSize();
+	string ret = "=================== relokacije ========================\n";
+	ret += "offset    tip       rdbr      znak\n";
+
+	for (deque<string>::iterator iter = getQBegin(); iter != getQEnd(); iter++) {
+		if (iter == getQBegin()) continue;//zaobilazim und sekciju
+		string ulaz = *iter;
+		ret += ulaz;
+		ret += "\n";
+		ret += "----------------------------------------------------\n";
+	}
+
+	ret += "==================================================\n";
+	return ret;
+}
+
+

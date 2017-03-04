@@ -1,0 +1,49 @@
+tabele
+===================tabela simbola========================
+naziv     tip       offset    lok/glob  rdbr      velicina sekcije
+UND       UND       0         l         0         0         
+pod       .data     0         l         1         47        
+druga     .text     0         l         2         57        
+p         pod       28        g         3         /         
+p1        pod       38        g         4         /         
+p2        druga     12        g         5         /         
+ext       UND       0         g         6         /         
+x         UND       0         g         7         /         
+ab        UND       0         g         8         /         
+lab       pod       12        l         9         /         
+a         pod       39        l         10        /         
+k2        druga     10        l         11        /         
+lab4      druga     13        l         12        /         
+lab3      druga     37        l         13        /         
+==================================================
+tabele relokacije
+=================== relokacije ========================
+offset    tip       rdbr      znak
+sekcija: pod
+30	 Abs32 	1	noSign 
+34	 Abs32 	5	noSign 
+39	 Abs32 	3	+
+39	 Abs32 	2	-
+43	 Abs32 	6	+
+
+----------------------------------------------------
+sekcija: druga
+22	 shr: 5	 PCRel19 	5	 noSign 
+51	 shr: 0	Abs16H	4	
+55	 shr: 0	Abs16L	4	
+
+----------------------------------------------------
+==================================================
+kodovi instrukcija po sekcijama
+=================== kodovi ========================
+sekcija: pod
+00 00 00 00 00 23 23 23 e0 f0 00 00 f5 2c 00 05 8c 17 ff e9 
+f5 28 c0 00 e6 08 80 00 05 00 0c 00 00 00 00 00 00 00 24 f6 
+ff ff ff 00 00 00 00 
+----------------------------------------------------
+sekcija: druga
+23 23 23 23 23 23 23 23 23 23 05 00 41 8c 10 00 03 8c 10 00 
+36 8c 10 00 15 ad da 80 00 3e 3c 8b 00 ea 29 9c 07 8f b8 00 
+00 4f a8 00 00 4f a0 00 54 4f a8 00 00 4f a0 00 00 
+----------------------------------------------------
+==================================================
